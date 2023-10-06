@@ -3,7 +3,10 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Category;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\App;
+use Tests\Fixtures\Model;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +21,9 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        \App\Models\Category::factory("10")->create();
+        \App\Models\Car::factory("20")->create();
+
+
     }
 }
